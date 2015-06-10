@@ -2,10 +2,12 @@
 
 ###README
 
-Bhattacharyya距離の測定
-2つのヒストグラム(正規化していなくても可)を渡すと、Bhattacharyya距離を返します。行と列の数はそれぞれ同じでないといけません。
+Mesuaring Bhattacharyya distance.
 
-####サンプル
+Measure the Bhattacharyya distance of two histograms(don't need normatization).
+These should have same number of columns and rows.
+
+####Sample
 
 		hist_1 = Array.new(5){Array.new(5){rand(1..50)}}
 		hist_2 = Array.new(5){Array.new(5){rand(1..50)}}
