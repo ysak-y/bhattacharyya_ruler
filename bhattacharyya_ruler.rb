@@ -6,11 +6,11 @@ def bhattacharyya_ruler(hist_1, hist_2)
 	col = hist_1[0].length
 	
 	if hist_2.length != row || hist_2[0].length != col
-		#行か列の数が違う場合はfalseを返す。
+		#return false if there is different number of row or column between two histograms
 		return false
 	end
 	
-	#各ヒストグラムの正規化を行う
+	#normalization each histograms
 	sum = 0
 	sum2 = 0
 
@@ -24,7 +24,7 @@ def bhattacharyya_ruler(hist_1, hist_2)
 		hist_2[i] = hist_2[i].map{|a| a.to_f / sum2}
 	end
 	
-	#Bhattacharyya距離を測定する。
+	#measurering Bhattacharyya distance
 	dist = 0
 
 	row.times do |i|
